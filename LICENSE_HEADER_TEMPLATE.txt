@@ -1,0 +1,29 @@
+Paste this block at the top of every CoreLogic source file that was ported
+from PhotoRec/TestDisk. Replace <original file> with the upstream .c/.h file
+the code came from (e.g. file_jpg.c, phbs.c, photorec.c). Files that are
+entirely new (e.g. json_log.cpp, DeviceInterface.cpp) still become GPL when
+compiled into the engine, so use the same block minus the "Derived from"
+lines.
+
+/*
+ * <filename> — part of DeepScan CoreLogic
+ *
+ * Derived from PhotoRec (TestDisk suite), <original file>
+ * Copyright (C) 1998-2022 Christophe Grenier <grenier@cgsecurity.org>
+ * https://www.cgsecurity.org
+ * C++ port modifications Copyright (C) 2026 DeepScan contributors
+ *
+ * This software is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along
+ * with this program; if not, write to the Free Software Foundation, Inc.,
+ * 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+ */

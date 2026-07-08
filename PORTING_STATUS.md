@@ -128,9 +128,11 @@ Upstream PhotoRec ships ~300 `file_*.c` parsers; ~290 remain unported.
    handler/UI sets it yet.
 6. Minor: `/* FIXME REMOVE ME */` debug remnant in `file_jpg.cpp:905`;
    TIFF-LE has an upstream-inherited `TODO` at `file_tiff_le.cpp:459`.
-7. **Licensing**: PhotoRec is GPLv2+. The ported sources currently carry
-   no license headers; as a derivative work, GPL headers/attribution and a
-   `COPYING` file need to be restored before distribution.
+7. **Licensing**: PhotoRec is GPLv2+, so the port is a derivative work and
+   is GPLv2+ as well. This repo now carries `COPYING` (the GPLv2 text) and
+   `LICENSE_HEADER_TEMPLATE.txt`; the template header still needs to be
+   applied to each file in the CoreLogic source tree (which lives outside
+   this repo).
 
 ## 5. What to do next (suggested order)
 
@@ -159,4 +161,8 @@ Upstream PhotoRec ships ~300 `file_*.c` parsers; ~290 remain unported.
    regression tests carving known disk images and diffing results against
    upstream `photorec` output; the standalone JPEG tool can seed a
    unit-test harness for `file_jpg`.
-9. **GPL compliance** — restore license headers and attribution.
+9. **GPL compliance** — `COPYING` and a header template are now in this
+   repo; apply the header to every CoreLogic source file, and decide the
+   product's licensing strategy early (fully GPL product vs. GPL engine as
+   a separate process behind a proprietary front-end vs. clean-room
+   replacement).
